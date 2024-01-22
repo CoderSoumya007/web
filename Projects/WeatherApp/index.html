@@ -1,0 +1,73 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="locationinput">
+            <span><img src="./search.png" alt=""></span>
+            <input type="text" value="Brahmapur">
+        </div>
+        <div class="error">No city found</div>
+        <div class="weather">
+            <div class="location">
+                <h1>Your Location</h1>
+            </div>
+            <div class="description">
+                <p>clear sky</p>
+            </div>
+            <div class="temperature">
+                <h1>temp</h1>
+            </div>
+            <div class="description">
+                <p class="pressure">pressure</p>|
+                <p class="Humidity">Humidity</p>
+            </div>
+            <hr style="margin-top: 2.5rem">
+
+            <div class="forcast">
+                <div class="column">
+                    <p id="d1"></p>
+                    <p id="t1"></p>
+                </div>
+                <div class="column">
+                    <p id="d2"></p>
+                    <p id="t2"></p>
+                </div>
+                <div class="column">
+                    <p id="d3"></p>
+                    <p id="t3"></p>
+                </div>
+                <div class="column">
+                    <p id="d4"></p>
+                    <p id="t4"></p>
+                </div>
+                <div class="column">
+                    <p id="d5"></p>
+                    <p id="t5"></p>
+                </div>
+            </div>
+            <hr style="margin-bottom: 2rem;">
+            <div class="day3forcast">
+                <p>Today</p>
+                <p id="todaytemp">temp</p>
+            </div>
+            <div class="day3forcast">
+                <p>Tomorrow</p>
+                <p id="tomorrowtemp">temp</p>
+            </div>
+            <div class="day3forcast">
+                <p>Day after tomorrow</p>
+                <p id="dattemp">temp</p>
+            </div>
+        </div>
+    </div>
+    <script src="./javaScript.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+.container
+{
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   width: fit-content;
+}
+form{
+    background-color:#2b2d36;
+    border-radius: 1rem;
+    border-style:solid;
+    border-color:black;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.numberscontainer{
+    padding: 0rem .7rem;
+    margin-bottom: 1rem;
+
+}
+.display{
+    padding:1rem 1.4rem;
+    margin-top: 2rem;
+}
+#display{
+    width: 20vw;
+    text-align: right;
+    font-size: 2rem;
+    border: 0;
+    box-shadow: none;
+    background-color:#2b2d36;
+    color: white;
+}
+.row{
+    display: flex;
+    justify-content: center;
+}
+body{
+    height: 100vh;
+    width: 100wh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.row{
+    display: flex;
+    padding: .5rem 0rem;
+    justify-content: space-evenly;
+}
+.row input{
+    background-color:black;
+    color: aqua;
+    border-radius: 1rem;
+    height: 3rem;
+    width: 4rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+#equals{
+    width: 8.5rem;
+}
+
+form input.operator{
+color: red;
+}

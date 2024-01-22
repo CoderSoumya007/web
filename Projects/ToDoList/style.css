@@ -1,0 +1,15 @@
+body{
+    display: flex;
+    gap: 1rem;
+}
+.leftcontainer{
+flex: .4;
+background-color:red;
+border-radius: 1rem;
+}
+.rightcontainer{
+flex: .6;
+background-color: green;
+border-radius: 1rem;
+
+}

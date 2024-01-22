@@ -1,0 +1,60 @@
+.heading{
+    background-color: cadetblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-between;
+    padding: 0rem .8rem 0rem .8rem;
+}
+.subtopic{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.slidecontainer{
+    display: flex;
+}
+.topic{
+    height: fit-content;
+}
+.topic p{
+    margin: .5rem;
+    font-size: 2.5rem;
+}
+body{
+    margin: 0;
+    height: 100vh;
+}
+
+#container{
+    height:85%;
+    background-color:rgb(9, 9, 9);
+    padding: 1rem;
+    display: flex;
+    transition: all ease .2s;
+}
+
+#container div{
+    margin: 1px;
+    /* transition: all ease .1s; */
+}
+
+.sort button{
+    padding: .5rem 1rem .5rem 1rem;
+    font-size: 1rem;
+    background-color: chartreuse;
+    cursor: pointer;
+    transition: transform .2s;
+}
+
+.sort button:hover{
+   transform: scale(1.1);
+}
+
+.dropdown-content{
+    display: none;
+}
+
+.sort:hover .dropdown-content{
+    display: block;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Element Swap Animation</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: #3498db;
+      color: #fff;
+      text-align: center;
+      line-height: 100px;
+      position: relative;
+      transition: transform 0.5s ease;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="box1" class="box">Box 1</div>
+  <div id="box2" class="box">Box 2</div>
+
+  <script>
+    // Function to animate the swap of two elements
+    function animateSwap(element1, element2) {
+      const keyframes = [
+        { transform: 'translateX(0)' },
+        { transform: 'translateX(100%)' },
+        { transform: 'translateX(0)' }
+      ];
+
+      const options = {
+        duration: 1000,
+        easing: 'ease-in-out',
+        fill: 'forwards'
+      };
+
+      const animation1 = element1.animate(keyframes, options);
+      const animation2 = element2.animate(keyframes, options);
+
+      animation1.onfinish = () => {
+        // Swap the elements in the DOM after the animation finishes
+        const parent = element1.parentNode;
+        const sibling = element1.nextSibling === element2 ? element1 : element2;
+        parent.insertBefore(element1, sibling);
+      };
+    }
+
+    // Get references to the elements
+    const box1 = document.getElementById('box1');
+    const box2 = document.getElementById('box2');
+
+    // Trigger the swap after a delay (for demonstration purposes)
+    setTimeout(() => animateSwap(box1, box2), 2000);
+  </script>
+
+</body>
+
+</html>

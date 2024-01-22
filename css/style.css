@@ -1,0 +1,7 @@
+/* all P elements after div elements will be customized */
+div~p{
+    width: 400px;
+    text-align: center;
+    background-color: black;
+    color: white;
+}

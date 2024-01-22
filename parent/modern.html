@@ -1,0 +1,33 @@
+// ... (Your existing code)
+
+// Add this code to declare a variable for the audio context and load a sound
+const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+const swapSoundUrl = 'path/to/swap-sound.mp3'; // Replace with the actual path to your sound file
+let swapSoundBuffer;
+
+// Load the sound asynchronously
+async function loadSwapSound() {
+const response = await fetch(swapSoundUrl);
+const buffer = await response.arrayBuffer();
+swapSoundBuffer = await audioContext.decodeAudioData(buffer);
+}
+
+// Call the function to load the swap sound
+loadSwapSound();
+
+// Update the swap function to include playing the swap sound
+async function swap(ele1, ele2) {
+let temp = ele1.style.height;
+ele1.style.height = ele2.style.height;
+ele2.style.height = temp;
+
+// Play the swap sound
+if (swapSoundBuffer) {
+const source = audioContext.createBufferSource();
+source.buffer = swapSoundBuffer;
+source.connect(audioContext.destination);
+source.start();
+}
+}
+
+// ... (Your existing code)

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Assignment 10:Form Making</title>
+  <!-- Favicon -->
+  <link rel="icon" href="./image/snake head.jpeg" type="image.jpeg">
+
+  <!-- meta tags -->
+  <meta name="description" content="This is a Form to fill all personal details which is made purely using html">
+  <meta name="author" content="Soumya Ranjan Panda">
+</head>
+
+<body style="background-color: rgb(255, 255, 255);">
+
+  <br />
+  <h2 style="color: chartreuse;" style="margin-left: 40%;">HTML Forms With Styling</h2>
+  <br />
+  <hr />
+  <br />
+  <br />
+
+  <form action="/submit" method>
+    <div>
+      <fieldset>
+        <legend>
+          <h1>Personal Information :</h1>
+        </legend>
+        <label for="fname">First Name :</label>
+        <input type="text" id="fname" name="firstname" required autofocus /><br /><br />
+        <label for="lname">Last Name :</label>
+        <input type="text" id="lname" name="lastname" required /><br /><br />
+
+        <div>
+          <label for="dob">Date Of Birth :</label> <input type="date" id="dob" name="dob"><br><br>
+          <label for="gender">Gender :</label>
+
+          <!-- for radio type all options must ahve equal name -->
+          <input type="radio" name="gender" id="gender" value="Male">Male
+          <input type="radio" name="gender" id="gender" value="Female">Female
+          <input type="radio" name="gender" id="gender" value="Other">Other
+
+          <br><br>
+          <label for="lang">Languages :</label>
+          <input type="checkbox" name="language1" value="java" id="lang">Java
+          <input type="checkbox" name="language2" value="c++" id="lang">C++
+          <input type="checkbox" name="language3" value="python" id="lang">Python
+        </div>
+      </fieldset>
+    </div>
+
+    <div>
+      <fieldset>
+        <legend>
+          <h1>Account Information :</h1>
+        </legend>
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required />
+        <p>
+          <i>(Your email address will be your username)</i>
+        </p>
+
+        <label for="remail">Re-Type Email :</label><br />
+        <input type="email" id="remail" name="remail" /><br /><br />
+
+        <label for="password">Password :</label>
+        <input type="password" id="password" name="password" placeholder="password"
+          pattern="(?=.*\d)((?=.*[a-z])||(?=.*[A-Z])).{8,}" required
+          title="Must Contain atleast one number and one UpperCase or lowercase letter ,and at least 8 or more characters"><br><br>
+
+        <label for="repassword">Re-Type Password:</label><br />
+        <input type="password" id="repassword" name="repassword" placeholder="password" required
+          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Min 8 character,1 number,case-sensitive" /><br>
+        <p><i>(Min 8 character,1 number,case-sensitive)</i></p>
+
+        <label for="security">Security Question :</label>
+        <select name="security" id="security" style="width: 150px;">
+          <option value="None">None</option>
+          <option value="What is your First Best Friend">What is your First Best Friend Name?</option>
+          <option value="Where your Mother was place">Where your mother was born?</option>
+          <option value="Where your Father was born?">Where your Father was born></option>
+          <option value="Where did your Parents met for first time?">Where did your parents met for first time?</option>
+        </select>
+
+        <br><br>
+        <label for="securityanswer">Security Answer :</label>
+        <input type="text" name="securityanswer" id="securityanswer">
+        <p><i>(Not case-sensitive)</i></p>
+      </fieldset>
+    </div>
+
+
+    <div>
+      <fieldset>
+        <legend>
+          <h1>
+            <h1>Contact Information :</h1>
+          </h1>
+        </legend>
+        <label for="address">Address :</label>
+        <input type="text" name="address" id="address" required><br><br>
+
+        <label for="city">City :</label>
+        <input name="city" id="city" required><br><br>
+
+        <label for="state">State :</label>
+        <select name="state" id="state" required>
+          <option value="Odisha">Odisha</option>
+          <option value="Punjab">Punjab</option>
+          <option value="Assam">Assam</option>
+          <option value="Uttar Pradesh">Uttar Pradesh</option>
+        </select>
+        <br><br>
+
+        <label for="zip">Zip Code :</label>
+        <input type="number" name="zip" id="zip" placeholder="Optional">
+        <br><br>
+
+        <label for="mobile">Mobile :</label>
+        <select name="mobile" id="mobile">
+          <option value="+91">+91</option>
+          <option value="+90">+90</option>
+          <option value="+09">+09</option>
+          <option value="+34">+34</option>
+        </select>
+        <input type="number" name="mobile" id="mobile" required><br>
+        <p><i>(No Spaces or dashes)</i></p>
+      </fieldset>
+    </div>
+
+
+    <!-- Button Tag -->
+    <div>
+      <br><br>
+      <button type="button"><a target="_blank" href="https://www.google.com">Tutorial to fill this page
+        </a></button><br>
+      <button type="submit" value="submit form" style="margin-left: 40%;"
+        onclick="alert('You wont be able to make changes after submitting the form')">
+        <img src="./image/snake head.jpeg" alt="could not load" height="80px" width="120px">
+        Submit form
+      </button>
+      <br><br><br>
+    </div>
+
+    <audio src="image/VID_20221224_144203.mp4" controls></audio>
+  </form>
+  <video controls src="./image/VID_20221224_144203.mp4" height="250px">
+    your browser do not support the format
+  </video>
+
+  <!-- for playing Youtube videos on my html page -->
+  <iframe height="250" height="315" src="https://www.youtube.com/embed/HG10yrq1pbk" title="YouTube video player"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+</body>
+
+</html>
